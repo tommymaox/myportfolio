@@ -60,17 +60,15 @@ const ENTRIES: Entry[] = [
   },
   {
     date: '2021 - 2023',
-    role: 'B.Sc. Electrical Systems',
+    role: 'Electrical Engineering',
     co: 'University of Melbourne',
-    pts: ['Systems-level foundation across electrical, signals, and computing.'],
+    pts: [],
   },
   {
     date: '2024',
     role: 'Cisco Certified Network Associate',
     co: 'CCNA · studying CCNP',
-    pts: [
-      'Routing, switching, and network protocol fundamentals — hands-on lab practice across multi-vendor topologies.',
-    ],
+    pts: [],
   },
 ]
 
