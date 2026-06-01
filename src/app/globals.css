@@ -4,11 +4,12 @@
 
 :root {
   /* Surfaces */
-  --bg: #090A0C;
-  --bg-2: #0D0E11;
-  --surface: #111318;
-  --surface-2: #161920;
-  --surface-3: #1C2028;
+  --bg: #0C0C0C;
+  --bg-alt: #131316;     /* alternating section background (slightly lighter) */
+  --bg-2: #0F0F12;
+  --surface: #131318;
+  --surface-2: #18181E;
+  --surface-3: #1F1F26;
 
   /* Hairlines */
   --hair: rgba(255, 255, 255, 0.055);
@@ -568,4 +569,122 @@ img, video, svg, iframe {
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(100,255,160,0.04);
   overflow: hidden;
   animation: slideUp 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ─── Premium redesign utilities (Phase 1) ─────────────────────── */
+
+/* Alternating-section background helper */
+.section-alt {
+  background: var(--bg-alt);
+}
+
+/* Rounded top corner between major sections */
+.section-rounded {
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  overflow: hidden;
+}
+
+/* Gradient heading text — premium technical look */
+.gradient-heading {
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 55%, var(--dim) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-heading-accent {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--accent) 75%, var(--accent-dim) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Display heading — massive, Kanit, condensed feel */
+.display-heading {
+  font-family: var(--font-kanit), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  font-size: clamp(48px, 9vw, 132px);
+}
+
+.display-heading-md {
+  font-family: var(--font-kanit), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  font-size: clamp(36px, 5.5vw, 76px);
+}
+
+/* Uppercase small label */
+.uppercase-label {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+/* Soft glowing card */
+.glow-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
+  border: 1px solid var(--hair);
+  border-radius: 18px;
+  transition: border-color var(--motion-base) var(--ease-out), background var(--motion-base) var(--ease-out);
+}
+.glow-card:hover {
+  border-color: var(--hair-3);
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.005));
+}
+
+/* Marquee scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  gap: 56px;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Magnetic-button base */
+.mag-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-family: var(--font-kanit), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--hair-2);
+  background: var(--surface);
+  color: var(--ink);
+  transition: border-color var(--motion-base) var(--ease-out), background var(--motion-base) var(--ease-out), transform 200ms var(--ease-out);
+  will-change: transform;
+}
+.mag-btn:hover {
+  border-color: var(--hair-3);
+  background: var(--surface-2);
+}
+.mag-btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #07120C;
+  font-weight: 600;
+}
+.mag-btn-primary:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent-dim);
 }
