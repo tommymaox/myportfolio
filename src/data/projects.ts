@@ -51,12 +51,12 @@ export const PROJECTS: Project[] = [
     desc: [
       {
         lines: [
-          { text: 'I built my own Ansible-style automation tool from scratch.' },
-          { label: 'DSL',        text: 'Custom YAML playbooks describe router/hardware config and commands.' },
-          { label: 'Runtime',    text: 'Python executes against real hardware from internal Linux servers.' },
-          { label: 'Deploy',     text: 'ADB drives OS pushes to test equipment and devices.' },
-          { label: 'Validation', text: 'Pass/fail checks validate test results, auto-populate the database, and render a live webapp dashboard.' },
-          { label: 'CI/CD',      text: 'GitLab CI/CD orchestrates system updates and config changes to the tool itself.' },
+          { text: 'A custom Python automation framework inspired by Ansible-style playbooks, built from scratch.' },
+          { label: 'DSL',        text: 'Custom YAML playbooks describe network device configuration and validation commands.' },
+          { label: 'Runtime',    text: 'Python executes against lab hardware from internal Linux servers.' },
+          { label: 'Deploy',     text: 'ADB drives OS pushes to test devices.' },
+          { label: 'Validation', text: 'Pass/fail checks validate results, populate the database, and render a live dashboard.' },
+          { label: 'CI/CD',      text: 'GitLab CI/CD orchestrates updates and config changes to the framework itself.' },
         ],
       },
       {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     tags: ['Python', 'FastAPI', 'YAML', 'SQLite', 'GitLab CI', 'ADB', 'Bash', 'REST', 'SNMP'],
     stageKey: 'regression',
     status: 'Production · Ericsson / Telstra',
-    metric: '10,247 production nodes · −50% regression time',
+    metric: '10,000+ production nodes · −50% regression time',
     layout: 'text-heavy',
     stageHeight: 520,
   },

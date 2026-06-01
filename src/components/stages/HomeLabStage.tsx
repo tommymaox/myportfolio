@@ -45,7 +45,7 @@ const NODES: Node[] = [
   [730, 540, 'tm-app',         ':5000 · next.js',  false, '#6366f1'],
 
   // Edge — outbound
-  [940, 320, 'cf-tunnel ×3',   'zero trust',       true,  '#ec4899'],
+  [940, 320, 'cf-tunnel ×3',   'Zero Trust',       true,  '#ec4899'],
   // AWS S3 — sits directly under mel-01, vertical connection
   [510, 480, 'aws-s3',         'nightly backup',   false, '#94a3b8'],
 

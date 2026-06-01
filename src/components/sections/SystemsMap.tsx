@@ -8,7 +8,7 @@ const COLS = [
   { x: 90,   label: 'EDGE',      sub: 'devices · external' },
   { x: 290,  label: 'NETWORK',   sub: 'unifi · zigbee' },
   { x: 510,  label: 'SERVER',    sub: 'mel-01 · docker' },
-  { x: 730,  label: 'TUNNEL',    sub: 'cloudflare · zero trust' },
+  { x: 730,  label: 'TUNNEL',    sub: 'cloudflare · Zero Trust' },
   { x: 940,  label: 'SERVICES',  sub: 'containers' },
   { x: 1150, label: 'INTEL',     sub: 'AI · data · backup' },
 ]
@@ -27,7 +27,7 @@ const NODES: Node[] = [
   // SERVER - hub
   [510, 300, 'mel-01',       'ubuntu · docker',  true,  '#10b981'],
   // TUNNEL
-  [730, 200, 'cf-tunnel',    'zero trust',       true,  '#f97316'],
+  [730, 200, 'cf-tunnel',    'Zero Trust',       true,  '#f97316'],
   [730, 420, 'aws-s3',       'nightly backup',   false, '#64748b'],
   // SERVICES
   [940, 120, 'zuyu',         'fastapi · 4000',   false, '#14b8a6'],
@@ -72,9 +72,9 @@ const CONTAINERS = [
   { name: 'homeassistant',  desc: 'automation hub',         detail: 'ha.feifei.food',          up: true,  color: '#3b82f6' },
   { name: 'zigbee2mqtt',    desc: 'Zigbee ↔ MQTT bridge',   detail: 'ch 11 · 24 devices',       up: true,  color: '#f59e0b' },
   { name: 'mosquitto',      desc: 'MQTT broker',            detail: ':1883 · event bus',        up: true,  color: '#10b981' },
-  { name: 'cloudflared ①',  desc: 'zero trust tunnel',      detail: 'feifei.food',              up: true,  color: '#f97316' },
-  { name: 'cloudflared ②',  desc: 'zero trust tunnel',      detail: 'zuyu.feifei.food',         up: true,  color: '#f97316' },
-  { name: 'cloudflared ③',  desc: 'zero trust tunnel',      detail: 'tommymao.feifei.food',     up: true,  color: '#f97316' },
+  { name: 'cloudflared ①',  desc: 'Zero Trust tunnel',      detail: 'feifei.food',              up: true,  color: '#f97316' },
+  { name: 'cloudflared ②',  desc: 'Zero Trust tunnel',      detail: 'zuyu.feifei.food',         up: true,  color: '#f97316' },
+  { name: 'cloudflared ③',  desc: 'Zero Trust tunnel',      detail: 'tommymao.feifei.food',     up: true,  color: '#f97316' },
   { name: 'code-server',    desc: 'remote VS Code',         detail: ':8443 · browser IDE',      up: true,  color: '#8b5cf6' },
   { name: 'vaultwarden',    desc: 'password vault',         detail: 'Bitwarden-compat',         up: true,  color: '#ec4899' },
   { name: 'tm-app-server',  desc: 'portfolio site',         detail: ':5000 · Next.js',          up: true,  color: '#6366f1' },

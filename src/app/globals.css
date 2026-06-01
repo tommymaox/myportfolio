@@ -688,3 +688,41 @@ img, video, svg, iframe {
   background: var(--accent-dim);
   border-color: var(--accent-dim);
 }
+
+/* ─── Mobile polish for redesigned sections ────────────────────── */
+
+/* On small screens, sticky-stack cards should release stickiness so each
+   card just flows naturally — preserves UX on touch devices. */
+@media (max-width: 720px) {
+  section#projects > div > div > div {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+/* Lift mag-btn touch targets on small screens */
+@media (max-width: 720px) {
+  .mag-btn {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Marquee should slow a touch on mobile to keep CPU happy */
+@media (max-width: 720px) {
+  .marquee-track {
+    animation-duration: 60s;
+  }
+}
+
+/* Hero CTA row wraps fully on phones with sensible vertical gap */
+@media (max-width: 720px) {
+  #hero .mag-btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+    justify-content: center;
+  }
+}
+
+/* Make sure no section ever overflows horizontally */
+section { max-width: 100vw; overflow-x: clip; }
